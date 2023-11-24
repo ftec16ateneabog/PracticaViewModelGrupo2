@@ -1,13 +1,27 @@
 package com.atenea.practicaviewmodel;
 
 import androidx.databinding.ObservableField;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class MyViewModel extends ViewModel {
-    public ObservableField<String> message = new ObservableField<>("Hello");
+import com.atenea.practicaviewmodel.Models.Model;
+import com.atenea.practicaviewmodel.Models.Usuario;
 
-    public void updateMessage() {
-        message.set("Hello, Data Binding");
+import java.io.Serializable;
 
+public class MyViewModel extends ViewModel implements Serializable {
+    private MutableLiveData<Usuario> result;
+
+    public MyViewModel()
+    {
+        result = new MutableLiveData<>();
+    }
+    public LiveData<Usuario> getResultado(){
+        return result;
+    }
+    public void registrar(Usuario usuario)
+    {
+        result.setValue(Model.registrar(usuario));
     }
 }

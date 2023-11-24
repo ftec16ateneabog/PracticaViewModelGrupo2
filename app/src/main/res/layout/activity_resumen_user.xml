@@ -4,22 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ResumenUser">
 
-    <Button
-        android:id="@+id/registrarButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
-        android:text="Registrar"
-        android:textSize="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/NombreTextViewPersistente"
+    <TextView
+        android:id="@+id/NombreTextViewResumen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
@@ -30,8 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/ApellidoTextViewPersistente"
+    <TextView
+        android:id="@+id/ApellidoTextViewResumen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -40,21 +28,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NombreTextViewPersistente" />
+        app:layout_constraintTop_toBottomOf="@+id/NombreTextViewResumen" />
 
-    <EditText
-        android:id="@+id/ContrasenaTextViewPersistente"
+    <TextView
+        android:id="@+id/ContrasenaTextViewResumen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
         android:hint="Ingrese contrasena"
         android:inputType="textPassword"
         android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/registrarButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ApellidoTextViewPersistente"
+        app:layout_constraintTop_toBottomOf="@+id/ApellidoTextViewResumen"
         app:layout_constraintVertical_bias="0.504" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
